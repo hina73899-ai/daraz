@@ -19,11 +19,8 @@ void main() {
   );
 
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => ProductViewModels()),
-      ],
-      child: const MyApp(),
+    ChangeNotifierProvider(create: (_) => ProductViewModels(),
+      child: MyApp(),
     ),
   );
 }
